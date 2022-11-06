@@ -1,2 +1,3 @@
-# docassemble-NLP
-playing with docassemble and natural language processing
+# docassemble.NLP
+
+Playing with docassemble and natural language processing
