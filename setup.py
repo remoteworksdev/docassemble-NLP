@@ -53,7 +53,7 @@ setup(name='docassemble.NLP',
       url='remoteworks.dev',
       packages=find_packages(),
       namespace_packages=['docassemble'],
-      install_requires=[openai],
+      install_requires=['openai'],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/docassemble-NLP/', package='docassemble.NLP'),
      )
