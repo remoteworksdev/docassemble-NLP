@@ -1,0 +1,10 @@
+---
+modules:
+  - helloGPT3.py
+---
+mandatory: True
+question: |
+  ${{ demand_body }}
+---
+code: |
+  demand_body = gpt3_completion()
