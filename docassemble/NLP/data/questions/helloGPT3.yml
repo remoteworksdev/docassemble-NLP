@@ -1,10 +1,12 @@
 ---
 modules:
-  - helloGPT3
+  - .helloGPT3
 ---
 mandatory: True
 question: |
   ${{ demand_body }}
 ---
 code: |
-  demand_body = gpt3_completion()
+  prompt = 'Write the reasoning for a demand letter to someone who totalled my car.'
+  demand_body = response
+---
