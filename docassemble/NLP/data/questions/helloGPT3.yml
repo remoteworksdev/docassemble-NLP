@@ -1,6 +1,6 @@
 ---
 modules:
-  - helloGPT3.py
+  - helloGPT3
 ---
 mandatory: True
 question: |
