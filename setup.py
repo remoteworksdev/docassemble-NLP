@@ -1,4 +1,3 @@
-import openai
 import os
 import sys
 from setuptools import setup, find_packages
@@ -43,10 +42,10 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
                 out.setdefault(package, []).append(prefix+name)
     return out
 
-setup(name='docassemble.docassemble-NLP',
+setup(name='docassemble.NLP',
       version='0.0.1',
       description=('A docassemble extension to play with NLP.'),
-      long_description='# docassemble.docassemble-NLP\n\nThis is a package for playing with NLP.',
+      long_description='# docassemble.NLP\n\nThis is a package for playing with NLP.',
       long_description_content_type='text/markdown',
       author='Remote Works',
       author_email='erik@remoteworks.dev',
@@ -54,8 +53,8 @@ setup(name='docassemble.docassemble-NLP',
       url='remoteworks.dev',
       packages=find_packages(),
       namespace_packages=['docassemble'],
-      install_requires=[],
+      install_requires=[openai],
       zip_safe=False,
-      package_data=find_package_data(where='docassemble/docassemble-NLP/', package='docassemble.docassemble-NLP'),
+      package_data=find_package_data(where='docassemble/docassemble-NLP/', package='docassemble.NLP'),
      )
 
