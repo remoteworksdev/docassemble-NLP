@@ -7,6 +7,6 @@ question: |
   ${{ demand_body }}
 ---
 code: |
-  prompt = 'Write the reasoning for a demand letter to someone who totalled my car.'
-  demand_body = response
+  prompt = 'Write the reasoning for a small claims demand letter'
+  demand_body = gpt3_completion(prompt)
 ---
