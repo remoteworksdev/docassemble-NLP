@@ -1,10 +1,17 @@
 ---
 modules:
-  - .helloGPT3
+  - .GPT3functions
 ---
 mandatory: True
 question: |
-  ${{ demand_body }}
+  ${ demand_body }
+attachements:
+  docx template file: smallClaimsDemand.docx
+---
+question: |
+  Explain your demand:
+fields:
+  no label: prompt
 ---
 code: |
   prompt = 'Write the reasoning for a small claims demand letter'

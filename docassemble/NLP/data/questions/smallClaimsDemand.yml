@@ -1,0 +1,43 @@
+---
+modules:
+  - .GPT3functions
+---
+id: question files
+include:
+  - questionsIndividual.yml
+  - questionsPerson.yml
+  - questionsPrompt.yml
+---
+id: objects
+objects:
+  plaintiff: Individual
+  defendant: Person
+---
+id: interview order
+mandatory: True
+code: |
+  defendant.name
+  defendant.address.block
+  defendant.phone_number
+  
+  plaintiff.name
+  plantiff.address.block
+  plaintiff.phone_number
+
+  demand_body = gpt3_completion(prompt)
+
+  download
+---
+id: question block
+question: |
+  Explain your demand:
+fields:
+  no label: prompt
+---
+id: attachement block
+event: download
+question: |
+  Your document is ready.
+attachements: 
+  name: Demand Letter, ${ plaintiff.name.last }
+  docx template file: smallClaimsDemand.docx
